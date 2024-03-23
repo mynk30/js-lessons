@@ -29,6 +29,7 @@ const newStrOne = "    hitesh    ";
 const url = "https://mayank.com/mayank%20soni";
 // console.log(url.replace("%20", "-"));
 
+
 // console.log(url.includes("mayank"));
 
 // console.log(gameName.split("-"));
