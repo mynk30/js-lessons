@@ -32,6 +32,3 @@ const url = "https://mayank.com/mayank%20soni";
 // console.log(url.includes("mayank"));
 
 // console.log(gameName.split("-"));
-
-
-
