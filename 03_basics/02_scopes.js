@@ -29,7 +29,7 @@ if(true) {
     const username = "mayank";
     if(username === "mayank") {
         const website = " youtube.com";
-        console.log(username + website);
+        // console.log(username + website);
     }
     // console.log(website);
 }
@@ -37,16 +37,19 @@ if(true) {
 // console.log(username);
 
 // +++++++++++++++ interesting ++++++++++++++++++++
-console.log(addOne(5));
+console.log(addOne(5)); // SUCCESS
 
 function addOne(num) {
     return num+1;
 }
 
+console.log(addOne(5)); // SUCCESS
 
 
-addTwo(5);
+// console.log(addTwo(5)); // THIS WILL GIVE ERROR 
 
 const addTwo = function (num) {
     return num + 2;
 }
+
+console.log(addTwo(5)); // SUCCESS
