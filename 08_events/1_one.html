@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <ul id="items">
+        <li id="photoshop">Photoshop</li>
+        <li id="river">River</li>
+        <li id="owl">Owl</li>
+        <li id="tree">Tree</li>
+        <li id="car">Car</li>
+        <li id="google"><a href="https://google.com">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    /*
+
+    3rd Parameter?
+    Event Propagation
+    default / false = Event Bubbling (bottom to top)
+    true = Event Capturing (top to bottom)
+    
+    e.stopPropagatio() = to stop propagation
+    e.preventDefault() = to stop default behaviour
+
+    */
+
+    // document.getElementById('items').addEventListener('click', function (e){
+    //     console.log('clicked inside ul');
+    //     // e.stopPropagation();
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function (e){
+    //     console.log("Owl Clicked");
+    //     e.stopPropagation();
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function (e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("Google Clicked");
+    // }, false)
+
+    document.querySelector('#items').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode;
+        // 1st approach ->
+        // removeIt.remove();
+        // 2nd approach ->
+        // removeIt.parentNode.removeChild(removeIt);
+        
+        if(e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            console.log(e.target.id);
+        }
+
+    }, false)
+
+
+    
+</script>
+</html>
