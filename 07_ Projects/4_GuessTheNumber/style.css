@@ -1,0 +1,41 @@
+body {
+    background-color: #212121;
+    color: white;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 35px;
+    margin: 7px ;
+    color: aquamarine;
+}
+
+form input[class = "guessField"] {
+    font-size: 22px;
+    padding: 2px;
+    margin: 7px 0;
+    color: tomato;
+    background-color: black;
+    width: 140px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+form input[type = "submit"] {
+    padding: 12px;
+    font-size: large;
+    margin: 7px 0;
+    text-decoration: underline;
+    border-radius: 10px;
+}
+
+.d-none {
+    display: none;
+}
